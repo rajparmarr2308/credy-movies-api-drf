@@ -31,7 +31,9 @@ example :-
 }
 
 output :-
-
+{
+"access_token":"XXXXX",
+}
 example :-
 {
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJ1c2VybmFtZSI6InBhbmthaiIsImV4cCI6MTY2NjM1MTI2MiwiZW1haWwiOiIifQ.zf30V0piPod5BlSgjBojQr6q98cJ9U0zubgyjgRPToU"
