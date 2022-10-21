@@ -3,10 +3,15 @@
 Accesing 3rd party credy API
 GET https://demo.credy.in/api/v1/maya/movies/
 
+
 For this we have passed paswword and username from System Environment variable
+ 
+ 
  
 with URL 
 http://localhost:8000/credy
+
+
 
 for pages pass page parameter
 http://localhost:8000/credy?page=3
@@ -16,6 +21,9 @@ http://localhost:8000/credy?page=5
 ------------------------------
 To Register USER  and get acces token(change password from admin panel to change raw password there and to use it) :-
 
+
+
+
 POST http://localhost:8000/register/
 input :-
 
@@ -24,23 +32,38 @@ input :-
     “password”: <desired password>
 }
 
+
+ 
+ 
+ 
 example :-
 {
     "username":"pankaj",
     "password":"pankaj@123"
 }
 
+ 
+ 
+ 
+ 
 output :-
 {
 "access_token":"XXXXX",
 }
+ 
+ 
+ 
+ 
 example :-
 {
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3LCJ1c2VybmFtZSI6InBhbmthaiIsImV4cCI6MTY2NjM1MTI2MiwiZW1haWwiOiIifQ.zf30V0piPod5BlSgjBojQr6q98cJ9U0zubgyjgRPToU"
 }
 
-http://localhost:8000/api/token/
 
+ 
+ 
+ 
+ http://localhost:8000/api/token/
 
 input
 
@@ -59,7 +82,12 @@ output
 
 Copy Above acces token And add everytime when we make any Request ( As Barear Token)
 
+ 
+ 
+ 
+ 
 Get All movies from Database
+
 
 Get http://localhost:8000/movies
 Output:-
@@ -78,10 +106,18 @@ Output:-
     ]
 }
 
+ 
+ 
+ 
+ 
+ 
 Get Movie By UUID
 
 GET http://localhost:8000/movie/7a5fd364-b4d4-457d-8bb6-2e6475eb391c/
 
+ 
+ 
+ 
 OUTPUT:-
 
 {
@@ -92,6 +128,8 @@ OUTPUT:-
 }
 
 
+ 
+ 
 GET COLLECTION 
 http://localhost:8000/collection/
 
@@ -116,6 +154,9 @@ Output
     }
 ]
 
+ 
+ 
+ 
 GET COLLECTION BY UUID
 http://localhost:8000/collection/0388d6c9-63e4-4170-8cf9-65a220822d20
 
@@ -128,9 +169,13 @@ OUTPUT :-
     "movies": []
 }
 
+ 
+ 
 POST COLLECTION
 POST http://localhost:8000/collection/
 
+ 
+ 
 OUTPUT:-
 
 {
@@ -146,9 +191,12 @@ OUTPUT:-
     ]
 }
 
+ 
+ 
 UPDATE COLLECTION
 PUT http://localhost:8000/collection/<collection_uuid>/
 
+ 
 INPUT:-
 {
     “title”: <Optional updated title>,
@@ -159,14 +207,26 @@ INPUT:-
 
 
 
+ 
+ 
 DELETE COLLECTION
 DELETE http://localhost:8000/collection/<collection_uuid>/
 
+ 
+ 
 
 CREATED CUSTOM MIDDLEWARE :- RequestCounterMiddleware
 
+ 
+ 
 TO COUNT REQUEST
 http://localhost:8000/request-count
 
+ 
+ 
 TO RESET COUNT:-
 http://localhost:8000/request-count/reset/
+ 
+ 
+ 
+ 
