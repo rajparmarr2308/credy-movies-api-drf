@@ -23,11 +23,14 @@ class Collection(models.Model):
         through="MovieCollection",
         through_fields=("collection", "movie"),
     )
+    def __str__(self):
+        return self.title
 
 """This Model is to map movies with collection  Database"""
 class MovieCollection(models.Model):
     collection = models.ForeignKey(Collection, on_delete=models.CASCADE)
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
-
+    def __str__(self):
+        return str(self.collection)+"- Collection With Movie -"+str(self.movie)
 
